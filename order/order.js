@@ -29,6 +29,8 @@ const OrderSchema = new mongoose.Schema({
 
 const Order = mongoose.model("Order", OrderSchema);
 
+const Cart = mongoose.model("Cart");
+
 // Middleware giả lập xác thực
 function authenticateUser(req, res, next) {
     const email = req.headers.authorization;

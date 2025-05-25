@@ -81,7 +81,7 @@ router.post("/", async (req, res) => {
     await order.save({ session });
 
     await Cart.updateOne(
-      { userEmail: req.user.email },
+      { email: req.user.email },
       { $set: { items: [] } },
       { session }
     );
